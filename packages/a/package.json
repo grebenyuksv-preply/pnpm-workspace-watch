@@ -10,6 +10,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "b": "workspace:^1.0.0",
     "lodash": "^4.17.21"
+  },
+  "dependenciesMeta": {
+    "b": {
+      "injected": true
+    }
   }
 }

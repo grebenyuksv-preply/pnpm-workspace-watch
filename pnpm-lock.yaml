@@ -2,11 +2,19 @@ lockfileVersion: 5.4
 
 importers:
 
+  .:
+    specifiers: {}
+
   packages/a:
     specifiers:
+      b: workspace:^1.0.0
       lodash: ^4.17.21
     dependencies:
+      b: file:packages/b
       lodash: 4.17.21
+    dependenciesMeta:
+      b:
+        injected: true
 
   packages/b:
     specifiers:
@@ -36,4 +44,12 @@ packages:
     engines: {node: '>=0.10.0'}
     dependencies:
       loose-envify: 1.4.0
+    dev: false
+
+  file:packages/b:
+    resolution: {directory: packages/b, type: directory}
+    name: b
+    version: 1.0.0
+    dependencies:
+      react: 18.1.0
     dev: false
